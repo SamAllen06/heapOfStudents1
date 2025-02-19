@@ -4,17 +4,34 @@
 
 Date::Date(){
 	Date::dob = "";
-	int Date::day = 0;
-	int Date::month = 0;
-	int Date::year = 0;
+	Date::day = 0;
+	Date::month = 0;
+	Date::year = 0;
 } //end constructor definition
 
 void Date::init(std::string dob){
 	Date::dob = dob;
-	...
+	std::string sDay;
+	std::string sMonth;
+	std::string sYear;
+	std::stringstream converter;
+	
+	converter.clear();
+	converter.str("");
+	
+	converter.str(Date::dob);
+	getline(converter, sMonth, '/');
+	getline(converter, sDay, '/');
+	getline(converter, sYear, '/');
+	
+	converter.clear();
+	converter.str("");
+
+	converter << sMonth << " " << sDay << " " << sYear;
+	converter >> Date::month >> Date::day >> Date::year;
 } //end initializer definition
 
 void Date::printDate(){
-	std::string months = {"null", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-	std::cout << months[month] << " "  << day << ", " << year<< std::endl;
+	std::string months[] = {"", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+	std::cout << months[Date::month] << " "  << Date::day << ", " << Date::year<< std::endl;
 } //end printDate definition

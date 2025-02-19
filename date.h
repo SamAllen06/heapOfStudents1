@@ -12,7 +12,7 @@ class Date{
 	
 	public:
 		Date();
-		void init(dob);
+		void init(std::string dob);
 		void printDate();
 
 }; //end class definition
