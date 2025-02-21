@@ -2,6 +2,8 @@
 #define STUDENT_IS_DEFINED
 
 #include <iostream>
+#include "address.h"
+#include "date.h"
 
 class Student{
 	protected:
@@ -10,15 +12,16 @@ class Student{
 		std::string fName;
 		Date* dob;
 		Date* expectedGrad;
-		Address* Address;
+		Address* address;
 		int credits;
 	
 	public:
 		Student();
 		~Student();
-		void init(studentString);
+		void init(std::string studentString);
 		void printStudent();
 		std::string getLastFirst();
+
 
 }; //end class definition
 

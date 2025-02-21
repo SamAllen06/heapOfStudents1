@@ -16,5 +16,5 @@ void Address::init(std::string streetAddress, std::string city, std::string stat
 } //end init definition
 
 void Address::printAddress(){
-	std::cout << "Student Address: " << Address::streetAddress << ", " << Address::city << ", " << Address::state << ", " << Address::zip << std::endl;
+	std::cout << Address::streetAddress << ", " << Address::city << ", " << Address::state << ", " << Address::zip << std::endl;
 } //end printAddress definition

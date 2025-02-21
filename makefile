@@ -7,3 +7,6 @@ run:
 
 clean:
 	rm *.o
+
+valgrind: 
+	valgrind ./main.o
