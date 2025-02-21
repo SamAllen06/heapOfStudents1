@@ -1,12 +1,11 @@
-main.o:
-	g++ -g main.cpp address.cpp date.cpp -o main.o
+main.o: main.cpp student.h address.h date.h student.cpp address.cpp date.cpp
+	g++ -g main.cpp student.cpp address.cpp date.cpp -o main.o
 
-run:
-	g++ -g main.cpp address.cpp date.cpp -o main.o
+run: main.o
 	./main.o
 
 clean:
 	rm *.o
 
 valgrind: 
-	valgrind ./main.o
+	valgrind --leak-check=full ./main.o

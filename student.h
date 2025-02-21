@@ -10,7 +10,7 @@ class Student{
 		std::string studentString;
 		std::string lName;
 		std::string fName;
-		Date* dob;
+		Date* birthDate;
 		Date* expectedGrad;
 		Address* address;
 		int credits;
