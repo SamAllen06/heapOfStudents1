@@ -5,14 +5,14 @@
 
 class Date{
 	protected:
-		std::string dob;
+		std::string date;
 		int day;
 		int month;
 		int year;
 	
 	public:
 		Date();
-		void init(std::string dob);
+		void init(std::string date);
 		void printDate();
 
 }; //end class definition

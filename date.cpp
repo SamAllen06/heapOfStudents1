@@ -3,14 +3,14 @@
 #include <sstream>
 
 Date::Date(){
-	Date::dob = "";
+	Date::date = "";
 	Date::day = 0;
 	Date::month = 0;
 	Date::year = 0;
 } //end constructor definition
 
-void Date::init(std::string dob){
-	Date::dob = dob;
+void Date::init(std::string date){
+	Date::date = date;
 	std::string sDay;
 	std::string sMonth;
 	std::string sYear;
@@ -19,7 +19,7 @@ void Date::init(std::string dob){
 	converter.clear();
 	converter.str("");
 	
-	converter.str(Date::dob);
+	converter.str(Date::date);
 	getline(converter, sMonth, '/');
 	getline(converter, sDay, '/');
 	getline(converter, sYear, '/');
