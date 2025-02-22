@@ -4,6 +4,9 @@ main.o: main.cpp student.h address.h date.h student.cpp address.cpp date.cpp
 run: main.o
 	./main.o
 
+debug: main.o
+	gdb main.o
+
 clean:
 	rm *.o
 
